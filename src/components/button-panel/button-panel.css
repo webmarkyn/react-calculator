@@ -1,0 +1,6 @@
+.button-panel .group {
+    height: 100px;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
