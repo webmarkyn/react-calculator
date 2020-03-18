@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './app.css';
+
 import Display from '../display';
 import ButtonDisplay from '../button-panel';
 
@@ -14,10 +16,10 @@ class App extends React.Component {
   render() {
     const { value } = this.state;
     return (
-      <main>
+      <div className="main">
         <Display value={value} />
         <ButtonDisplay />
-      </main>
+      </div>
     );
   }
 }
