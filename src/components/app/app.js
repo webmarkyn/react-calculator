@@ -3,24 +3,30 @@ import React from 'react';
 import './app.css';
 
 import Display from '../display';
-import ButtonDisplay from '../button-panel';
-// eslint-disable-next-line no-unused-vars
+import ButtonPanel from '../button-panel';
 import calculate from '../../logic/calculate';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '0',
+      total: null,
+      next: null,
+      operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(buttonName) {
+    this.setState(state => calculate(state, buttonName));
   }
 
   render() {
-    const { value } = this.state;
+    const { total, operation, next } = this.state;
     return (
       <div className="app">
-        <Display value={value} />
-        <ButtonDisplay />
+        <Display operation={operation} next={next || '0'} total={total || '0'} />
+        <ButtonPanel handleClick={this.handleClick} />
       </div>
     );
   }

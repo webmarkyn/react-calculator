@@ -3,16 +3,20 @@ import PropTypes from 'prop-types';
 
 import './display.css';
 
-const Display = ({ value }) => (
-  <div className="display">{value}</div>
+const Display = ({ total, next, operation }) => (
+  <div className="display">{operation ? next : total}</div>
 );
 
 Display.defaultProps = {
-  value: '0',
+  total: '0',
+  next: null,
+  operation: null,
 };
 
 Display.propTypes = {
-  value: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
+  operation: PropTypes.string,
 };
 
 export default Display;

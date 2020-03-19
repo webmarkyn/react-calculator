@@ -9,9 +9,11 @@ const classes = action => {
   return properClasses;
 };
 
-const Button = ({ name, color, wide }) => (
+const Button = ({
+  name, color, wide, handleClick,
+}) => (
   <div className={wide ? 'button-container big' : 'button-container'}>
-    <button type="button" className={classes(color)}>{name}</button>
+    <button type="button" className={classes(color)} onClick={() => handleClick(name)}>{name}</button>
   </div>
 );
 
@@ -24,6 +26,7 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.bool,
   wide: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default Button;
