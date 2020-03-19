@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     const { value } = this.state;
     return (
-      <div className="main">
+      <div className="app">
         <Display value={value} />
         <ButtonDisplay />
       </div>
