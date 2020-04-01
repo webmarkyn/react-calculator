@@ -9,6 +9,7 @@
     height: 100%;
     font-size: 50px;
     border: 1px solid #fff;
+    background: gray;
 }
 
 .button.action {

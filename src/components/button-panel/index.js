@@ -1,3 +1,3 @@
-import ButtonDisplay from './button-panel';
+import ButtonPanel from './button-panel';
 
-export default ButtonDisplay;
+export default ButtonPanel;
